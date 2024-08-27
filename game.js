@@ -46,13 +46,13 @@ if(gamePattern[p1]==userChosenColour){
     }
 }
 else{
-
-    $("h1").text("Game Over Press Any Key to Restart");
-    $("h2").text("");
     flag=false;
     level=0;
     p1=0;
+    $("h1").text("Game Over Press Any Key to Restart");
+    $("h2").text("");
     playSound('wrong');
+    gamePattern=[];
 
 }
     // $("h1").text("Game Ended");
@@ -83,6 +83,7 @@ audio.play();
 
 function nextSequence(){
  level++;
+ p1=0;
  $("h1").text('Level '+ level);
  setTimeout(function(){
    console.log("wait time");
@@ -94,6 +95,6 @@ function nextSequence(){
  $("h2").text('Current Color '+randomChosenColor);
  //console.log(randomChosenColor);
  playSound(randomChosenColor);
- $("#randomChosenColor").addClass("pressed");
+ //$("#randomChosenColor").addClass("pressed");
 
 }
