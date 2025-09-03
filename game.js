@@ -5,7 +5,7 @@ var buttonColours=["red","yellow","blue","green"];
 var level=0;
 var p1=0;
 var flag=false;
-
+//hell0
 
 $(document).keydown(function(){
  if(flag==false){
